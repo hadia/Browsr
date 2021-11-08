@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface TMDBApi {
     @GET("movie/popular")
     suspend fun getPopularTvShows(
-        @Query("language") query: String? = null,
+        @Query("language") query: String= "en",
         @Query("page") page: Int? = null
     ): Response<PaginatedListResponse<Show>>
 

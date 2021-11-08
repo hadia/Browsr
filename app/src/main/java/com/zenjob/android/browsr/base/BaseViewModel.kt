@@ -7,7 +7,7 @@ import com.zenjob.android.browsr.utils.ErrorViewState
 import com.zenjob.android.browsr.utils.SingleLiveEvent
 
 open class BaseViewModel : ViewModel() {
-    private val _loadingState: SingleLiveEvent<Boolean> = SingleLiveEvent()
+    protected val _loadingState: SingleLiveEvent<Boolean> = SingleLiveEvent()
     val loadingState: LiveData<Boolean>
         get() = _loadingState
 

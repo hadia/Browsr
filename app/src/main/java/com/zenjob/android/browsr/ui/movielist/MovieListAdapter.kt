@@ -6,7 +6,7 @@ import com.zenjob.android.browsr.base.BaseAdapter
 import com.zenjob.android.browsr.data.Show
 import com.zenjob.android.browsr.databinding.ViewholderMovieItemBinding
 import coil.load
-import com.zenjob.android.browsr.utils.baseImgUrl
+import com.zenjob.android.browsr.utils.AppConstants
 
 class MovieListAdapter(private val listener: MovieListAdapterListener) : BaseAdapter<Show, ViewholderMovieItemBinding>() {
 
@@ -18,7 +18,7 @@ class MovieListAdapter(private val listener: MovieListAdapterListener) : BaseAda
         binding.title.text = show.title
         binding.releaseDate.text = android.text.format.DateFormat.format("yyyy", show.releaseDate)
         binding.rating.text = "${show.voteAverage ?: 0}"
-        binding.poster.load("$baseImgUrl${show.posterPath}")
+        binding.poster.load("${AppConstants.BASE_IMAGE_URL}${show.posterPath}")
         binding.root.setOnClickListener {
             listener.onMovieItemClick(it, position, show)
         }
