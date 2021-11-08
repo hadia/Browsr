@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Browsr</string>
+    <string name="app_name">Movies</string>
     <string name="Error">Error!</string>
     <string name="empty_state_view_error_title">Something went wrong!</string>
     <string name="not_found">Not Found!</string>
