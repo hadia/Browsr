@@ -12,7 +12,6 @@ interface TMDBApi {
         @Query("page") page: Int? = null
     ): Single<PaginatedListResponse<Movie>>
 
-
     @GET("movie/{movie_id}")
     fun getDetails(
         @Path("movie_id") movieId: Long,
