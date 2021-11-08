@@ -6,7 +6,6 @@ import java.util.Date
 
 data class Show(
     val id: Long,
-    val imdbId: String?,
     val overview: String?,
     val title: String,
     @Json(name = "release_date") val releaseDate: Date?,
