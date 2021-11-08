@@ -34,8 +34,7 @@ The Movie app is built to help user to get populars movies and check details
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
+This section list any major frameworks/libraries used to bootstrap your project
 * [Kotlin]
 * [Jetpack Navigation Component]
 * [Built with MVVM (Model–viewModel–Model)]
@@ -52,8 +51,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+
 
 [Loom Record for demo](<https://www.loom.com/share/741000174afc4f7582a78bcb3cc63370>)
 https://www.loom.com/share/741000174afc4f7582a78bcb3cc63370
