@@ -3,6 +3,7 @@ package com.zenjob.android.browsr.ui.detail
 import com.zenjob.android.browsr.R
 import com.zenjob.android.browsr.base.BaseBindingFragment
 import com.zenjob.android.browsr.databinding.FragmentMovieDetailsBinding
+import org.koin.android.ext.android.bind
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MovieDetailFragment : BaseBindingFragment<FragmentMovieDetailsBinding>() {
@@ -16,6 +17,15 @@ class MovieDetailFragment : BaseBindingFragment<FragmentMovieDetailsBinding>() {
                 android.text.format.DateFormat.format("yyyy", releaseDate)
             binding.rating.text = "${voteAverage ?: 0}"
             binding.description.text = overview
+
+            viewModel.fetchShowImages(id)
         }
+
+        viewModel.showsImagesResult.observe(
+            viewLifecycleOwner,
+            {
+               binding.slider.setItems(it)
+            }
+        )
     }
 }

@@ -25,10 +25,16 @@ class MovieListFragment : BaseBindingFragment<FragmentMovieListBinding>() {
 
     override fun onViewBound(binding: FragmentMovieListBinding) {
         binding.list.adapter = movieListAdapter
+
+      binding.swipeContainer.setOnRefreshListener {
+        viewModel. getShowsList()
+        }
+
         viewModel.showsItemsResult.observe(
             viewLifecycleOwner,
             {
                 movieListAdapter.submitList(it)
+                binding.swipeContainer.setRefreshing(false)
             }
         )
     }

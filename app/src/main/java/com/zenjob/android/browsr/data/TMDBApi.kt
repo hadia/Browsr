@@ -17,4 +17,10 @@ interface TMDBApi {
         @Path("movie_id") movieId: Long,
         @Query("language") query: String? = null
     ): Response<Show>
+
+    @GET("movie/{movie_id}/images")
+    suspend fun getMovieImages(
+        @Path("movie_id") movieId: Long,
+        @Query("include_image_language") language: String = "en"
+    ): Response<MovieImagesList>
 }

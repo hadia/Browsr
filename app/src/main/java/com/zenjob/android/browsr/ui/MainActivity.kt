@@ -3,7 +3,6 @@ package com.zenjob.android.browsr.ui
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.zenjob.android.browsr.R
 import com.zenjob.android.browsr.base.BaseBindingActivity
 import com.zenjob.android.browsr.databinding.ActivityMainBinding
@@ -17,9 +16,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     override val viewModel: MainViewModel by viewModel()
 
     override fun onViewBound(binding: ActivityMainBinding) {
+
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {

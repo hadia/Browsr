@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.zenjob.android.browsr.ui.MainActivity"
+            android:fitsSystemWindows="false"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

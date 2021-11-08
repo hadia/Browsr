@@ -9,5 +9,6 @@ data class Show(
     val overview: String?,
     val title: String,
     @Json(name = "release_date") val releaseDate: Date?,
-    @Json(name = "vote_average") val voteAverage: Float?
+    @Json(name = "vote_average") val voteAverage: Float?,
+    @Json(name = "poster_path") val posterPath: String? = null
 ) : Serializable

@@ -17,7 +17,7 @@ class MovieListViewModel(private val showsRepository: ShowsRepository) : BaseVie
         getShowsList()
     }
 
-    private fun getShowsList() {
+     fun getShowsList() {
         showLoading()
         viewModelScope.launch {
             showsRepository.getPopularTvShowsList().checkResponse(
