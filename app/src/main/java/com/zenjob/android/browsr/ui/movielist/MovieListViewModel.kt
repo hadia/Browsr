@@ -4,14 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.zenjob.android.browsr.base.BaseViewModel
-import com.zenjob.android.browsr.data.Movie
+import com.zenjob.android.browsr.data.Show
 import com.zenjob.android.browsr.network.checkResponse
 import com.zenjob.android.browsr.repository.ShowsRepository
 import kotlinx.coroutines.launch
 
 class MovieListViewModel(private val showsRepository: ShowsRepository) : BaseViewModel() {
-    private val _showsItemsResult: MutableLiveData<List<Movie>> = MutableLiveData()
-    val showsItemsResult: LiveData<List<Movie>> = _showsItemsResult
+    private val _showsItemsResult: MutableLiveData<List<Show>> = MutableLiveData()
+    val showsItemsResult: LiveData<List<Show>> = _showsItemsResult
 
     init {
         getShowsList()
