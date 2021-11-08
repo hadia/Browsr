@@ -2,7 +2,7 @@ package com.zenjob.android.browsr.data
 
 import com.squareup.moshi.Json
 import java.io.Serializable
-import java.util.*
+import java.util.Date
 
 data class Movie(
     val id: Long,

@@ -1,7 +1,9 @@
 package com.zenjob.android.browsr.network
 
-import com.google.gson.GsonBuilder
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.zenjob.android.browsr.BuildConfig
+import com.zenjob.android.browsr.data.DateJsonAdapter
 import okhttp3.Authenticator
 import okhttp3.Cache
 import okhttp3.Interceptor
@@ -9,7 +11,7 @@ import okhttp3.OkHttpClient
 import retrofit2.CallAdapter
 import retrofit2.Converter
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
 
@@ -66,7 +68,11 @@ class RetrofitClient(builder: Builder) {
     }
 
     private fun createGsonConverter(): Converter.Factory {
-        return GsonConverterFactory.create(GsonBuilder().create())
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .add(DateJsonAdapter())
+            .build()
+        return MoshiConverterFactory.create(moshi)
     }
 
     class Builder(internal val baseUrl: String) {
