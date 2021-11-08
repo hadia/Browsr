@@ -68,10 +68,6 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.google.android.material:material:$material_version"
 
-    //TODO remove
-    implementation "io.reactivex.rxjava2:rxjava:$rxJava_version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid_version"
-
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
